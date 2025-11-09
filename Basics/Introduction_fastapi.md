@@ -104,7 +104,7 @@ Here's a Mermaid diagram showing the FastAPI request flow:
 
 ```mermaid
 flowchart TD
-    A["Client Request\n(e.g., GET /items/5)"] --> B["FastAPI App\n(main.py)"]
+    A["Client Request\n(e.g., GET /items/5)"] --> B["FastAPI App(main.py)"]
     B --> C{Path Matches?}
     C -->|Yes| D["Endpoint Function(read_item())"]
     D --> E["Type Validation(Pydantic)"]
@@ -162,7 +162,7 @@ FastAPI's speed comes from Starlette/ASGI. Here's a simple Mermaid bar chart (us
 
 ```mermaid
 graph TD
-    subgraph "Framework Benchmarks (ops/sec)"
+    subgraph "Framework Benchmarks (ops/sec)\n"
         Flask[Flask: ~1,200]
         Django[Django: ~800]
         FastAPI[FastAPI: ~3,000+]
