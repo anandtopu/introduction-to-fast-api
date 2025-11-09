@@ -162,14 +162,14 @@ FastAPI's speed comes from Starlette/ASGI. Here's a simple Mermaid bar chart (us
 
 ```mermaid
 graph TD
-    subgraph "Framework Benchmarks (ops/sec)   "\n
-    
-        Flask[Flask: ~1,200]
-        Django[Django: ~800]
-        FastAPI[FastAPI: ~3,000+]
+    subgraph "Framework Benchmarks\n(ops/sec)"
+        Flask["Flask\n~1,200"]
+        Django["Django\n~800"]
+        FastAPI["FastAPI\n~3,000+"]
     end
-    
+
     style FastAPI fill:#4caf50
+
 ```
 
 (FastAPI often tops TechEmpower benchmarks—check them for latest numbers.)
