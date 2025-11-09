@@ -106,8 +106,8 @@ Here's a Mermaid diagram showing the FastAPI request flow:
 flowchart TD
     A["Client Request\n(e.g., GET /items/5)"] --> B["FastAPI App\n(main.py)"]
     B --> C{Path Matches?}
-    C -->|Yes| D["Endpoint Function\n(read_item())"]
-    D --> E["Type Validation\n(Pydantic)"]
+    C -->|Yes| D["Endpoint Function(read_item())"]
+    D --> E["Type Validation(Pydantic)"]
     E --> F["Execute & Return JSON"]
     F --> G["Response to Client"]
     C -->|No| H["404 Error"]
