@@ -97,8 +97,8 @@ curl "http://127.0.0.1:8000/hello?name=Steve" -H "Accept: application/json"
 flowchart TD
     A["Client: GET /hello?name=Steve"] --> B["FastAPI Router"]
     B --> C{"Validate Query?"}
-    C -->|Yes| D["Type Hint Check\n(str, Optional)"]
-    D --> E["Function Call\n(hello(name='Steve'))"]
+    C -->|Yes| D["Type Hint Check(str, Optional)"]
+    D --> E["Function Call(hello(name='Steve'))"]
     E --> F["Return Dict → JSON"]
     F --> G["200 Response"]
     C -->|No| H["422 Validation Error"]
