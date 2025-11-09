@@ -24,19 +24,20 @@ Here's a quick Mermaid diagram comparing them:
 
 ```mermaid
 graph TD
-    A[Python Frameworks] --> B[Flask]
-    A --> C[Django]
-    A --> D[FastAPI]
-    
-    B --> E[GUI-Focused<br/>Lightweight, Flexible]
-    C --> F[GUI-Focused<br/>Batteries-Included (Built-in ORM)]
-    D --> G[API-Focused<br/>High-Performance, Type-Safe<br/>No Built-in ORM (for speed)]
-    
-    E --> H[Good for Prototypes]
-    F --> I[Good for Full Sites]
-    G --> J[Good for Data/ML APIs<br/>Auto-Docs, Standards]
-    
+    A["Python Frameworks"] --> B["Flask"]
+    A --> C["Django"]
+    A --> D["FastAPI"]
+
+    B --> E["GUI-Focused\nLightweight, Flexible"]
+    C --> F["GUI-Focused\nBatteries-Included (Built-in ORM)"]
+    D --> G["API-Focused\nHigh-Performance, Type-Safe\nNo Built-in ORM (for speed)"]
+
+    E --> H["Good for Prototypes"]
+    F --> I["Good for Full Sites"]
+    G --> J["Good for Data/ML APIs\nAuto-Docs, Standards"]
+
     style D fill:#f9f,stroke:#333,stroke-width:2px
+
 ```
 
 - **Flask**: Simple, no built-in ORM—great for small APIs but requires more setup for validation.
@@ -103,17 +104,18 @@ Here's a Mermaid diagram showing the FastAPI request flow:
 
 ```mermaid
 flowchart TD
-    A[Client Request<br/>(e.g., GET /items/5)] --> B[FastAPI App<br/>(main.py)]
+    A["Client Request\n(e.g., GET /items/5)"] --> B["FastAPI App\n(main.py)"]
     B --> C{Path Matches?}
-    C -->|Yes| D[Endpoint Function<br/>(read_item())]
-    D --> E[Type Validation<br/>(Pydantic)]
-    E --> F[Execute & Return JSON]
-    F --> G[Response to Client]
-    C -->|No| H[404 Error]
+    C -->|Yes| D["Endpoint Function\n(read_item())"]
+    D --> E["Type Validation\n(Pydantic)"]
+    E --> F["Execute & Return JSON"]
+    F --> G["Response to Client"]
+    C -->|No| H["404 Error"]
     H --> G
-    
+
     style B fill:#e1f5fe
     style D fill:#f3e5f5
+
 ```
 
 This visualizes how FastAPI routes requests, validates, and responds—simple yet powerful.
