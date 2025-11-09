@@ -95,15 +95,16 @@ curl "http://127.0.0.1:8000/hello?name=Steve" -H "Accept: application/json"
 
 ```mermaid
 flowchart TD
-    A[Client: GET /hello?name=Steve] --> B[FastAPI Router]
-    B --> C{Validate Query?}
-    C -->|Yes| D[Type Hint Check<br/>(str, Optional)]
-    D --> E[Function Call<br/>(hello(name='Steve'))]
-    E --> F[Return Dict → JSON]
-    F --> G[200 Response]
-    C -->|No| H[422 Validation Error]
+    A["Client: GET /hello?name=Steve"] --> B["FastAPI Router"]
+    B --> C{"Validate Query?"}
+    C -->|Yes| D["Type Hint Check\n(str, Optional)"]
+    D --> E["Function Call\n(hello(name='Steve'))"]
+    E --> F["Return Dict → JSON"]
+    F --> G["200 Response"]
+    C -->|No| H["422 Validation Error"]
     H --> G
     style D fill:#e8f5e8
+
 ```
 
 Validation is built-in—no extra code for 422 errors on bad types!
